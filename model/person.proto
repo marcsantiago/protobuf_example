@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package model;
+
+message Person {
+    string first_name = 1;
+    string last_name = 2;
+    int32 age = 3;
+
+    message Parent {
+        string first_name = 1;
+        string last_name = 2;
+    }
+
+    repeated Parent parents = 4;
+}
